@@ -8,7 +8,9 @@
     "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +26,7 @@
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
+    "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "jest": "^26.2.2",
     "live-server": "^1.2.1",

@@ -18,13 +18,15 @@ module.exports = (env) => {
                 exclude: /node_modules/
             }, {
                 test: /\.?css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                use: [MiniCssExtractPlugin.loader, 
+                    'css-loader', 
+                    'sass-loader']
             }]
         },
         plugins: [
             CSSExtract
         ],
-        devtool: isProduction ? "source-map" : "cheap-module-eval-source-map",
+        devtool: isProduction ? "source-map" : "inline-source-map",
         devServer: {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true
